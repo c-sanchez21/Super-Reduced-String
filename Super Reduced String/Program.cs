@@ -9,7 +9,7 @@ namespace Super_Reduced_String
     class Program
     {
         /*
-         Problem: 
+         Problem: https://www.hackerrank.com/challenges/reduced-string/problem
          Steve has a string, , consisting of lowercase English alphabetic letters.
          In one operation, he can delete any pair of adjacent letters with same value.
          For example, string "aabcc" would become either "aab" or "bcc" after operation.
@@ -18,8 +18,8 @@ namespace Super_Reduced_String
          Help Steve out by finding and printing 's non-reducible form!
         */
         static void Main(string[] args)
-        {
-            string s = "baab"; //Our initial string
+        {            
+            string s = "aaabccddd";//Our initial string
 
             //Instantiate a StringBuilder to conduct string operations
             StringBuilder sb = new StringBuilder(s);
@@ -34,9 +34,7 @@ namespace Super_Reduced_String
                 }
                 else idx++;
             }
-            if (sb.Length > 0)
-                Console.WriteLine(sb.ToString());
-            else Console.WriteLine("Empty String");
+            Console.WriteLine("{0}", sb.Length > 0 ? sb.ToString() : "Empty String");            
             Console.ReadKey();
         }
     }
